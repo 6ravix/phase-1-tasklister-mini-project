@@ -94,8 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return 0;
       }
     });
-
-    listItems.forEach((item) => {
-      list.removeChild(item);
-      list.appendChild
-
+    if (list !== null) {
+      listItems.forEach((item) => {
+        list.removeChild(item);
+        list.appendChild(item);
+      });
+    } else {
+      console.error('No <ul> element found on the page.');
+    }
+  });
+});
